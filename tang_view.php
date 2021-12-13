@@ -4,4 +4,5 @@
     $q = $conn->prepare($sql);
     $data=array("luotxem" => $tangluotxem, "id" => $id);
     $q->execute($data);
+    //
 ?>
