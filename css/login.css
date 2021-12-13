@@ -1,0 +1,14 @@
+body{
+    background-image: url('../img/bglogin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+section{
+    border-radius: 10px;
+}
+#particles-js{
+    height: 100%;
+    
+}
