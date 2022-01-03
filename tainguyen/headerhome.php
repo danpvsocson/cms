@@ -36,7 +36,7 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="?thumuc=&file=home"><i class="bi bi-house-fill"></i> CMS</a>
+                                <a class="nav-link active" aria-current="page" href="index.php"><i class="bi bi-house-fill"></i> CMS</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-file-person"></i> Thành Viên </a>
@@ -49,6 +49,7 @@
                                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-newspaper"></i> Bài Viết </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="?thumuc=content&file=index">Cập Nhật Bài Viết</a></li>
+                                    <li><a class="dropdown-item" href="?thumuc=content&file=group">Nhóm Bài Viết</a></li>
                                     <li><a class="dropdown-item" href="?thumuc=taikhoan&file=comingsoon">Coming Soon</a></li>
                                 </ul>
                             </li>
@@ -56,6 +57,7 @@
                                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-shop"></i> Sản Phẩm </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="?thumuc=sanpham&file=index">Cập Nhật Sản Phẩm</a></li>
+                                    <li><a class="dropdown-item" href="?thumuc=sanpham&file=group">Nhóm Sản Phẩm</a></li>
                                     <li><a class="dropdown-item" href="?thumuc=sanpham&file=comingsoon">Coming Soon</a></li>
                                 </ul>
                             </li>
