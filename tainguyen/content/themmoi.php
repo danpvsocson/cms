@@ -18,12 +18,13 @@
         if ($tieude == "") {
             echo '<p class="alert alert-danger">Hãy nhập đầy đủ thông tin mục có chứa (<span class="text-danger">*</span>)</p>';
             $error = true;
-        } else {
-            if ($modul == "") {
-                echo '<p class="alert alert-danger">Hãy chọn Modul !</p>';
-                $error = true;
-            }
         }
+        // else {
+        //     if ($modul == "") {
+        //         echo '<p class="alert alert-danger">Hãy chọn Modul !</p>';
+        //         $error = true;
+        //     }
+        // }
         //Kiểm tra xem bài viết đã có chưa
         // $sql = "SELECT * FROM b_content WHERE tieude=:tieude and modul=:modul";
         // $q = $conn->prepare($sql);
@@ -119,12 +120,12 @@
                             <option value="">Chọn Modul</option>
                             <?php
                             //Liên kết bảng <=> modul
-                            $sql = "SELECT * FROM nhom";
+                            $sql = "SELECT * FROM nhom_content";
                             $a = $conn->prepare($sql);
                             $a->execute();
                             $view1 = $a->fetchAll();
                             foreach ($view1 as $key => $info) {
-                                echo '<option value="' . $info['tieude'] . '">' . $info['tieude'] . '</option>';
+                                echo '<option value="' . $info['ma'] . '">' . $info['tieu_de'] . '</option>';
                             }
                             ?>
                         </select>
