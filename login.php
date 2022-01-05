@@ -25,42 +25,41 @@ session_start();
     <div id="particles-js"></div>
     <script type="text/javascript" src="js/particles.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-        <?php
-        if (isset($_POST['btnlogin'])) {
-            $username = $_POST['txtusername'];
-            $password = $_POST['txtpassword'];
-            $check_login = true;
+    <?php
+    if (isset($_POST['btnlogin'])) {
+        $username = $_POST['txtusername'];
+        $password = $_POST['txtpassword'];
+        $check_login = true;
+        $_SESSION['loginSuccess'] = false;
+        if (empty($_SESSION['demdangnhap'] = "")) {
+            $_SESSION['demdangnhap'] = 0;
+        }
+        if ($username == "" || $password == "") {
+            echo '<p class="alert alert-danger">Hãy nhập đủ thông tin tài khoản và mật khẩu !</p>';
+            $check_login = false;
             $_SESSION['loginSuccess'] = false;
-            if (empty($_SESSION['demdangnhap'] = "")) {
+        }
+        if ($_SESSION['demdangnhap'] >= 5) {
+            $check_login = false;
+            echo '<p class="alert alert-danger">Bạn đã đăng nhập sai quá số lần cho phép !</p>';
+        }
+        if ($check_login) {
+            include('database/dangnhap.php');
+            // var_dump($login);
+            if ($login) {
+                echo '<script>window.location="index.php"</script>';
+                // header("location:index.php");
+                $_SESSION['loginSuccess'] = true;
                 $_SESSION['demdangnhap'] = 0;
-            }
-            if ($username == "" || $password == "") {
-                echo '<p class="alert alert-danger">Hãy nhập đủ thông tin tài khoản và mật khẩu !</p>';
-                $check_login = false;
+            } else {
+                echo '<p class="alert alert-danger">Tài khoản hoặc mật khẩu sai !</p>';
                 $_SESSION['loginSuccess'] = false;
-            }
-            if ($_SESSION['demdangnhap'] >= 5) {
-                $check_login = false;
-                echo '<p class="alert alert-danger">Bạn đã đăng nhập sai quá số lần cho phép !</p>';
-            }
-            if ($check_login) {
-                include('database/dangnhap.php');
-                // var_dump($login);
-                if ($login) {
-                    echo '<script>window.location="index.php"</script>';
-                    // header("location:index.php");
-                    $_SESSION['loginSuccess'] = true;
-                    $_SESSION['demdangnhap'] = 0;
-                } else {
-                    echo '<p class="alert alert-danger">Tài khoản hoặc mật khẩu sai !</p>';
-                    $_SESSION['loginSuccess'] = false;
-                    $_SESSION['demdangnhap']++;
-                }
+                $_SESSION['demdangnhap']++;
             }
         }
-
-        ?>
-        <main class="container p-4 p-md-0 position-absolute top-50 start-50 translate-middle">
+    }
+    ?>
+    <main class="container p-4 p-md-0 position-absolute top-50 start-50 translate-middle">
         <div class="row justify-content-center ">
             <div class="p-0 col-md-8 bg-white">
                 <form action="" method="post">
