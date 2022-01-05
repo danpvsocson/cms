@@ -10,5 +10,13 @@ section{
 }
 #particles-js{
     height: 100%;
-    
+}
+.img_admin{
+    width: 350px !important;
+    height: 300px;
+}
+.img_admin img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

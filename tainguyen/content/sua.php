@@ -136,15 +136,15 @@
                             <option value="">Chọn Modul</option>
                             <?php
                             //lien ket bang nhom
-                            $sql = "SELECT * FROM nhom";
+                            $sql = "SELECT * FROM nhom_content";
                             $a = $conn->prepare($sql);
                             $a->execute();
                             $view1 = $a->fetchAll();
                             foreach ($view1 as $key => $value) {
-                                if ($view['nhom'] == $value['tieude']) {
-                                    echo '<option value="' . $value['tieude'] . '" selected>' . $value['tieude'] . '</option>';
+                                if ($view['nhom'] == $value['tieu_de']) {
+                                    echo '<option value="' . $value['ma'] . '" selected>' . $value['tieu_de'] . '</option>';
                                 } else {
-                                    echo '<option value="' . $value['tieude'] . '">' . $value['tieude'] . '</option>';
+                                    echo '<option value="' . $value['ma'] . '">' . $value['tieu_de'] . '</option>';
                                 }
                             }
                             ?>

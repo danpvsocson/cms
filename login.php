@@ -25,11 +25,6 @@ session_start();
     <div id="particles-js"></div>
     <script type="text/javascript" src="js/particles.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <section class="bg-white p-4 position-absolute top-50 start-50 translate-middle">
-        <div class=" text-center">
-            <h2 class="" style="font-size: 13px;">THÔNG TIN ĐĂNG NHẬP</h2>
-        </div>
-        <hr>
         <?php
         if (isset($_POST['btnlogin'])) {
             $username = $_POST['txtusername'];
@@ -65,25 +60,35 @@ session_start();
         }
 
         ?>
-
-        <form action="" method="post">
-            <div class="mb-3">
-                <label class="form-label" style="font-size: 13px;">Tài khoản</label>
-                <input type="text" style="font-size: 13px;" class="form-control" name="txtusername">
+        <main class="container p-4 p-md-0 position-absolute top-50 start-50 translate-middle">
+        <div class="row justify-content-center ">
+            <div class="p-0 col-md-8 bg-white">
+                <form action="" method="post">
+                    <div class="card-group justify-content-center">
+                        <div class="card pt-5 pb-4 px-4 mx-auto form_login mb-0">
+                            <h1>Login</h1>
+                            <span class="mb-2">Đăng nhập trang danh cho quản trị web</span>
+                            <div class="">
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
+                                    <input name="txtusername" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                                </div>
+                                <div class="input-group flex-nowrap my-3">
+                                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-lock"></i></i></span>
+                                    <input type="password" name="txtpassword" class="form-control" placeholder="Password" aria-label="password" aria-describedby="addon-wrapping">
+                                </div>
+                                <button type="submit" name="btnlogin" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Login</button>
+                                <a href="" type="button" class="btn btn-success"><i class="bi bi-globe"></i> Web</a>
+                            </div>
+                        </div>
+                        <div class="d-none d-lg-block p-3 mx-auto align-content-center img_admin">
+                            <img class="" src="img/login_admin.png" alt="">
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="mb-3">
-                <label class="form-label" style="font-size: 13px;">Password</label>
-                <input type="password" style="font-size: 13px;" class="form-control" name="txtpassword">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" style="font-size: 10px;" class="form-check-input mt-2" id="exampleCheck1" name="cluu">
-                <label class="form-check-label" style="font-size: 10px;" for="exampleCheck1">Nhớ thông tin đăng nhập</label>
-            </div>
-            <div class="text-center">
-                <button type="submit" style="font-size: 13px;" class="btn btn-primary" name="btnlogin">Đăng nhập</button>
-            </div>
-        </form>
-    </section>
+        </div>
+    </main>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 
