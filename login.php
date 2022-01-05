@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="icon/png" href="img/logo.png">
+    <link rel="icon" type="icon/png" href="img/adminlogin_logo_title.png">
     <title>Admin Login</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="css/style.css"> -->
@@ -61,7 +61,7 @@ session_start();
     ?>
     <main class="container p-4 p-md-0 position-absolute top-50 start-50 translate-middle">
         <div class="row justify-content-center ">
-            <div class="p-0 col-md-8 bg-white">
+            <div class="p-0 col-md-8 bg-white rounded-3">
                 <form action="" method="post">
                     <div class="card-group justify-content-center">
                         <div class="card pt-5 pb-4 px-4 mx-auto form_login mb-0">
